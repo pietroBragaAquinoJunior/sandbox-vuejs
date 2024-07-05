@@ -8,6 +8,7 @@ import PropsExample from './components/PropsExample.vue'
 import PropsFunction from './components/PropsFunction.vue'
 import ComputedProps from './components/ComputedProps.vue'
 import EmitExample from './components/EmitExample.vue'
+import EmitExample2 from './components/EmitExample2.vue'
 
 export default {
   components: {
@@ -17,7 +18,8 @@ export default {
     PropsExample,
     PropsFunction,
     ComputedProps,
-    EmitExample
+    EmitExample,
+    EmitExample2
   },
   data() {
     return {
@@ -36,6 +38,9 @@ export default {
     },
     mudarNomeAluno(){
       this.nomeAluno = "Valadão Estudante"
+    },
+    consoleLog(){
+      console.log("emit chamado")
     }
   },
   computed: {
@@ -61,6 +66,7 @@ export default {
     <ComputedProps :usuario="usuarioRefinado" />
     <p>{{ nomeAluno }}</p>
     <EmitExample @change-name="mudarNomeAluno" />
+    <EmitExample2 @teste="consoleLog" />
   </main>
 
   <!-- <header>

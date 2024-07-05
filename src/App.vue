@@ -9,6 +9,7 @@ import PropsFunction from './components/PropsFunction.vue'
 import ComputedProps from './components/ComputedProps.vue'
 import EmitExample from './components/EmitExample.vue'
 import EmitExample2 from './components/EmitExample2.vue'
+import EmitExample3 from './components/EmitExample3.vue'
 
 export default {
   components: {
@@ -19,7 +20,8 @@ export default {
     PropsFunction,
     ComputedProps,
     EmitExample,
-    EmitExample2
+    EmitExample2,
+    EmitExample3
   },
   data() {
     return {
@@ -29,7 +31,9 @@ export default {
       profissao: "engenheiro",
       cep: "65070610",
 
-      nomeAluno: "pietrinho estudante"
+      nomeAluno: "pietrinho estudante",
+
+      lista:[],
     }
   },
   methods:{
@@ -41,6 +45,9 @@ export default {
     },
     consoleLog(){
       console.log("emit chamado")
+    },
+    adicionarPersonagemNaLista(personagem: any){
+      this.lista.push(personagem);
     }
   },
   computed: {
@@ -67,6 +74,11 @@ export default {
     <p>{{ nomeAluno }}</p>
     <EmitExample @change-name="mudarNomeAluno" />
     <EmitExample2 @teste="consoleLog" />
+    <ul v-for="(personagem, index) in lista" :key="`personagem.name-${index}`">
+      <li>{{ personagem.name }}</li>
+    </ul>
+    <br/>
+    <EmitExample3 @adicionar-personagem-lista="adicionarPersonagemNaLista" />
   </main>
 
   <!-- <header>

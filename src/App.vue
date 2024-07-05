@@ -4,18 +4,49 @@
 import CounterNumber from './components/CounterNumber.vue'
 import CharacterList from './components/CharacterList.vue'
 import ComputerLife from './components/ComputerLife.vue'
+import PropsExample from './components/PropsExample.vue'
+import PropsFunction from './components/PropsFunction.vue'
+import ComputedProps from './components/ComputedProps.vue'
+import EmitExample from './components/EmitExample.vue'
 
-export default{
+export default {
   components: {
-    CounterNumber,CharacterList,ComputerLife
+    CounterNumber,
+    CharacterList,
+    ComputerLife,
+    PropsExample,
+    PropsFunction,
+    ComputedProps,
+    EmitExample
   },
-  data(){
+  data() {
     return {
+      contador:0,
 
+      nome: "pietro",
+      profissao: "engenheiro",
+      cep: "65070610",
+
+      nomeAluno: "pietrinho estudante"
+    }
+  },
+  methods:{
+    incrementarContador(){
+      this.contador = this.contador + 1
+    },
+    mudarNomeAluno(){
+      this.nomeAluno = "Valadão Estudante"
+    }
+  },
+  computed: {
+    usuarioRefinado(){
+      return {
+        nome: this.nome,
+        profissao: this.profissao
+      }
     }
   }
 }
-
 </script>
 
 <template>
@@ -24,6 +55,12 @@ export default{
     <CounterNumber />
     <CharacterList />
     <ComputerLife />
+    <PropsExample :mensagem="'Olá'" />
+    <p>{{ contador }}</p>
+    <PropsFunction :incrementarContadorDoComponentePai="incrementarContador" />
+    <ComputedProps :usuario="usuarioRefinado" />
+    <p>{{ nomeAluno }}</p>
+    <EmitExample @change-name="mudarNomeAluno" />
   </main>
 
   <!-- <header>

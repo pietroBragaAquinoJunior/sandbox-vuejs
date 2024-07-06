@@ -12,6 +12,7 @@ import EmitExample2 from './components/EmitExample2.vue'
 import EmitExample3 from './components/EmitExample3.vue'
 import SlotExample from './components/SlotExample.vue'
 import SlotWithName from './components/SlotWithName.vue'
+import FetchData from './components/FetchData.vue'
 
 export default {
   components: {
@@ -25,7 +26,8 @@ export default {
     EmitExample2,
     EmitExample3,
     SlotExample,
-    SlotWithName
+    SlotWithName,
+    FetchData
   },
   data() {
     return {
@@ -90,6 +92,9 @@ export default {
       <template v-slot:main>MAIN</template>
       <template v-slot:footer>FOOTER</template>
     </SlotWithName>
+    <FetchData />
+     O MELHOR LUGAR PARA COMEÇAR O FETCH É EM CREATED.
+     BEFORE CREATED NÃO EXISTE NEM OS MÉTODOS, NEM O DATA.
   </main>
 
   <!-- <header>

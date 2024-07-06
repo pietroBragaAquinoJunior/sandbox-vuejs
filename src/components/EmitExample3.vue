@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     export default {
         emit: ["adicionar-personagem-lista"],
         data(){

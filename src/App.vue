@@ -10,6 +10,8 @@ import ComputedProps from './components/ComputedProps.vue'
 import EmitExample from './components/EmitExample.vue'
 import EmitExample2 from './components/EmitExample2.vue'
 import EmitExample3 from './components/EmitExample3.vue'
+import SlotExample from './components/SlotExample.vue'
+import SlotWithName from './components/SlotWithName.vue'
 
 export default {
   components: {
@@ -21,7 +23,9 @@ export default {
     ComputedProps,
     EmitExample,
     EmitExample2,
-    EmitExample3
+    EmitExample3,
+    SlotExample,
+    SlotWithName
   },
   data() {
     return {
@@ -79,6 +83,13 @@ export default {
     </ul>
     <br/>
     <EmitExample3 @adicionar-personagem-lista="adicionarPersonagemNaLista" />
+    <SlotExample>
+      Olá, eu sou um butão!
+    </SlotExample>
+    <SlotWithName>
+      <template v-slot:main>MAIN</template>
+      <template v-slot:footer>FOOTER</template>
+    </SlotWithName>
   </main>
 
   <!-- <header>

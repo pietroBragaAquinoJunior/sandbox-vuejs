@@ -13,6 +13,8 @@ import EmitExample3 from './components/EmitExample3.vue'
 import SlotExample from './components/SlotExample.vue'
 import SlotWithName from './components/SlotWithName.vue'
 import FetchData from './components/FetchData.vue'
+import UserPage from './components/UserPage.vue'
+import SuspenseFetch from './components/SuspenseFetch.vue'
 
 export default {
   components: {
@@ -27,7 +29,9 @@ export default {
     EmitExample3,
     SlotExample,
     SlotWithName,
-    FetchData
+    FetchData,
+    UserPage,
+    SuspenseFetch
   },
   data() {
     return {
@@ -95,6 +99,15 @@ export default {
     <FetchData />
      O MELHOR LUGAR PARA COMEÇAR O FETCH É EM CREATED.
      BEFORE CREATED NÃO EXISTE NEM OS MÉTODOS, NEM O DATA.
+     <hr/>
+     <UserPage/>
+     <hr/>
+     <Suspense>
+        <SuspenseFetch />
+        <template #fallback>
+           Esperando o fetch...
+        </template>
+     </Suspense>
   </main>
 
   <!-- <header>

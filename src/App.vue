@@ -15,7 +15,8 @@
 // import FetchData from './components/FetchData.vue'
 // import UserPage from './components/UserPage.vue'
 // import SuspenseFetch from './components/SuspenseFetch.vue'
-import RefComputeComposition from './components/RefComputeComposition.vue'
+// import RefComputeComposition from './components/RefComputeComposition.vue'
+import CompPropEmitOthers from './components/CompPropEmitOthers.vue'
 
 export default {
   components: {
@@ -33,37 +34,42 @@ export default {
     // FetchData,
     // UserPage,
     // SuspenseFetch,
-    RefComputeComposition
+    // RefComputeComposition
+    CompPropEmitOthers
   },
   data() {
     return {
-      contador:0,
+      contador: 0,
 
-      nome: "pietro",
-      profissao: "engenheiro",
-      cep: "65070610",
+      nome: 'pietro',
+      profissao: 'engenheiro',
+      cep: '65070610',
 
-      nomeAluno: "pietrinho estudante",
+      nomeAluno: 'pietrinho estudante',
 
-      lista:[],
+      lista: [],
+      resultadoAlerta: ''
     }
   },
-  methods:{
-    incrementarContador(){
+  methods: {
+    incrementarContador() {
       this.contador = this.contador + 1
     },
-    mudarNomeAluno(){
-      this.nomeAluno = "Valadão Estudante"
+    mudarNomeAluno() {
+      this.nomeAluno = 'Valadão Estudante'
     },
-    consoleLog(){
-      console.log("emit chamado")
+    consoleLog() {
+      console.log('emit chamado')
     },
-    adicionarPersonagemNaLista(personagem: any){
-      this.lista.push(personagem);
+    adicionarPersonagemNaLista(personagem: any) {
+      this.lista.push(personagem)
+    },
+    receberEmit() {
+      this.resultadoAlerta = 'emit recebido'
     }
   },
   computed: {
-    usuarioRefinado(){
+    usuarioRefinado() {
       return {
         nome: this.nome,
         profissao: this.profissao
@@ -110,10 +116,12 @@ export default {
            Esperando o fetch...
         </template>
      </Suspense> -->
-     <Suspense>
+    <!-- <Suspense>
         <RefComputeComposition/>
         <template v-slot:fallback></template>
-     </Suspense>
+     </Suspense> -->
+    <CompPropEmitOthers @alerta="receberEmit" message="minha prop!" />
+    <p>{{ resultadoAlerta }}</p>
   </main>
 
   <!-- <header>

@@ -1,11 +1,9 @@
 <script lang="ts">
-    export default {
-
-    }
+export default {}
 </script>
 <template>
-    <button>
-        <slot> Submit </slot>
-    </button>
-    <hr/>
+  <button>
+    <slot> Submit </slot>
+  </button>
+  <hr />
 </template>

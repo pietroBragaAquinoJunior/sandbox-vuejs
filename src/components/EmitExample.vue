@@ -1,12 +1,12 @@
 <script lang="ts">
-    export default {
-        emits: ['change-name']
-    }
+export default {
+  emits: ['change-name']
+}
 </script>
 
 <template>
-    <div>
-        <button @click="$emit('change-name')">Change Name</button>
-    </div>
-    <hr>
+  <div>
+    <button @click="$emit('change-name')">Change Name</button>
+  </div>
+  <hr />
 </template>

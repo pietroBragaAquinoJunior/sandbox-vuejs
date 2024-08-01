@@ -1,6 +1,6 @@
 # sandbox
 
-Projeto criado para testar as funcionalidades do Vue 3.
+Projeto criado para testar as funcionalidades do Vue 3 como slots, fetch, computed, emit, props etc...
 
 Para usá-lo basta clonar o repositório e rodar os comandos npm install e npm run serve.
 

@@ -1,40 +1,40 @@
 <script lang="ts">
-// import HelloWorld from './components/HelloWorld.vue'
-// import TheWelcome from './components/TheWelcome.vue'
-// import CounterNumber from './components/CounterNumber.vue'
-// import CharacterList from './components/CharacterList.vue'
-// import ComputerLife from './components/ComputerLife.vue'
-// import PropsExample from './components/PropsExample.vue'
-// import PropsFunction from './components/PropsFunction.vue'
-// import ComputedProps from './components/ComputedProps.vue'
-// import EmitExample from './components/EmitExample.vue'
-// import EmitExample2 from './components/EmitExample2.vue'
-// import EmitExample3 from './components/EmitExample3.vue'
-// import SlotExample from './components/SlotExample.vue'
-// import SlotWithName from './components/SlotWithName.vue'
-// import FetchData from './components/FetchData.vue'
-// import UserPage from './components/UserPage.vue'
-// import SuspenseFetch from './components/SuspenseFetch.vue'
-// import RefComputeComposition from './components/RefComputeComposition.vue'
+import HelloWorld from './components/HelloWorld.vue'
+import TheWelcome from './components/TheWelcome.vue'
+import CounterNumber from './components/CounterNumber.vue'
+import CharacterList from './components/CharacterList.vue'
+import ComputerLife from './components/ComputerLife.vue'
+import PropsExample from './components/PropsExample.vue'
+import PropsFunction from './components/PropsFunction.vue'
+import ComputedProps from './components/ComputedProps.vue'
+import EmitExample from './components/EmitExample.vue'
+import EmitExample2 from './components/EmitExample2.vue'
+import EmitExample3 from './components/EmitExample3.vue'
+import SlotExample from './components/SlotExample.vue'
+import SlotWithName from './components/SlotWithName.vue'
+import FetchData from './components/FetchData.vue'
+import UserPage from './components/UserPage.vue'
+import SuspenseFetch from './components/SuspenseFetch.vue'
+import RefComputeComposition from './components/RefComputeComposition.vue'
 import CompPropEmitOthers from './components/CompPropEmitOthers.vue'
 
 export default {
   components: {
-    // CounterNumber,
-    // CharacterList,
-    // ComputerLife,
-    // PropsExample,
-    // PropsFunction,
-    // ComputedProps,
-    // EmitExample,
-    // EmitExample2,
-    // EmitExample3,
-    // SlotExample,
-    // SlotWithName,
-    // FetchData,
-    // UserPage,
-    // SuspenseFetch,
-    // RefComputeComposition
+    CounterNumber,
+    CharacterList,
+    ComputerLife,
+    PropsExample,
+    PropsFunction,
+    ComputedProps,
+    EmitExample,
+    EmitExample2,
+    EmitExample3,
+    SlotExample,
+    SlotWithName,
+    FetchData,
+    UserPage,
+    SuspenseFetch,
+    RefComputeComposition,
     CompPropEmitOthers
   },
   data() {
@@ -82,10 +82,10 @@ export default {
 <template>
   <header></header>
   <main>
-    <!-- <CounterNumber />
+    <CounterNumber />
     <CharacterList />
-    <ComputerLife /> -->
-    <!-- <PropsExample :mensagem="'Olá'" />
+    <ComputerLife />
+    <PropsExample :mensagem="'Olá'" />
     <p>{{ contador }}</p>
     <PropsFunction :incrementarContadorDoComponentePai="incrementarContador" />
     <ComputedProps :usuario="usuarioRefinado" />
@@ -124,7 +124,7 @@ export default {
     <p>{{ resultadoAlerta }}</p>
   </main>
 
-  <!-- <header>
+  <header>
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
@@ -134,7 +134,7 @@ export default {
 
   <main>
     <TheWelcome />
-  </main> -->
+  </main>
 </template>
 
 <style scoped>
